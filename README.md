@@ -22,3 +22,4 @@ Byte 25 to 28: Clock cycles per second / actual clock frequency (32 bit unsigned
 Byte 29: Line feed<br>
 
 ## Matlab TDoA Analysis
+First open the *main.m* script and define the number of used receivers by setting *num_receivers* accordingly. Then the number of different channels per receiver by setting *num_loras*. The recorded TDoA files have to be copied into the *tdoa_data* folder. The naming of the TDoA files has to follow a strict rule. Each file name begins with the receiver number, is followed by *_LORA* and then the channel number. Hence, for example for channel 2 of receiver 3 use *3_LORA2.txt*. Running *main.m* should now calculate the transmitter positions according to the TDoA data. After finishing these positions are exported in the *KML* format into the *export* folder. There will be a *KML* track for each channel/transmitter.
